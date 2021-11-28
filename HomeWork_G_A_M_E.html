@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a;
+        var b;
+        var arr = ["GAME","BRAND NEW GAME",5];
+        alert("Name of the game - " + arr[0] + "\nAbout game - " + arr[1] + "\nLevels - " + arr[2]);
+        do{
+        a = prompt("Введите уровень - Easy, Medium or Hard");
+        } while (a != "Easy" && a != "Medium" && a != "Hard");
+
+        if (a == "Easy"){
+        function easyLevel (arr){
+        b = +prompt("Пользователь введи 5 любых чисел !")
+        var arr2 = [];
+        var c = Math.floor(b/10000);
+        var c1 = b - c * 10000
+        arr2.push(c);
+        var d = Math.floor(c1/1000);
+        var d1 = c1 - d * 1000
+        arr2.push(d)
+        var e = Math.floor(d1/100);
+        var e1 = d1 - e * 100
+        arr2.push(e)
+        var f = Math.floor(e1/10);
+        var f1 = e1 - f * 10
+        arr2.push(f)
+        arr2.push(f1)
+        alert(arr2.sort())
+        };
+        easyLevel (arr);
+    }
+        
+        if(a =="Medium"){
+        function mediumLevel(arr){
+        var numberRandom1 = Math.floor(Math.random() * 100);
+        var numberRandom2 = Math.floor(Math.random() * 100);
+        Number = numberRandom1;
+        Number = numberRandom2;
+        var correctAnswer = numberRandom1 + numberRandom2;
+        for(i = 0; i < arr[2]; i++)
+        alert("Посчитайте сумму :" + numberRandom1 + " + " + numberRandom2);
+        var answer = +prompt("Введите ваш ответ");
+        if(answer != numberRandom1 + numberRandom2)
+        alert("Правильный ответ - " + correctAnswer);
+        else
+        alert("Вы ответели верно");
+        }
+        mediumLevel(arr)
+        };
+
+        if(a =="Hard"){
+        var count = 0;
+        function hardLevel(arr){
+        var numberRandom3 = Math.floor(Math.random() * 10);
+        var numberRandom4 = Math.floor(Math.random() * 10);
+        var numberRandom5 = Math.floor(Math.random() * 10);
+        Number = numberRandom3;
+        Number = numberRandom4;
+        var correctAnswer1 = numberRandom3 * numberRandom4 * numberRandom5;
+        for(i = 0; i < arr[2]; i++)
+        alert("Посчитайте произведение :" + numberRandom3 + " * " + numberRandom4 + " * " + numberRandom5);
+        var answer1 = +prompt("Введите ваш ответ");
+        if(answer1 != numberRandom3 * numberRandom4 * numberRandom5)
+        alert("Правильный ответ - " + correctAnswer1);
+        else
+        alert("Вы ответели верно"+"\n"+ "Вам начислен - 1 балл");
+        }
+        hardLevel(arr)
+        };
+        
+        
+        
+    </script>
+</body>
+</html>
